@@ -221,6 +221,7 @@ function CaseStudiesAnimated() {
                 progress={smoothProgress}
                 hoveredMV={hoveredMV}
                 onHover={() => handleHover(i)}
+                onHoverEnd={handleHoverEnd}
               />
             ))}
           </div>
@@ -284,6 +285,7 @@ interface RolodexCardProps {
   progress: MotionValue<number>;
   hoveredMV: MotionValue<number>;
   onHover: () => void;
+  onHoverEnd: () => void;
 }
 
 function RolodexCard({
@@ -293,6 +295,7 @@ function RolodexCard({
   progress,
   hoveredMV,
   onHover,
+  onHoverEnd,
 }: RolodexCardProps) {
   const cardCenter = index / (TOTAL - 1);
 
@@ -350,6 +353,8 @@ function RolodexCard({
       style={{ flex, opacity, borderRadius: 32 }}
       className="min-h-0 cursor-pointer overflow-hidden transition-shadow duration-100 ease-linear hover:shadow-[inset_0_0_0_2px_rgba(255,255,255,0.15)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
       onMouseEnter={onHover}
+      onTouchStart={onHover}
+      onTouchEnd={onHoverEnd}
       onFocus={onHover}
       tabIndex={0}
       role="article"
@@ -370,7 +375,19 @@ function RolodexCard({
             src={study.video}
           />
         )}
-        <div className="relative flex h-full items-end bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 sm:p-6">
+        <div className="relative flex h-full flex-col justify-between bg-gradient-to-t from-black/60 via-transparent to-black/40 p-4 sm:bg-gradient-to-t sm:from-black/60 sm:via-black/20 sm:to-transparent sm:p-6">
+          {/* Stats overlay — mobile only, visible when expanded */}
+          {isHovered && (
+            <div className="flex items-center gap-3 lg:hidden">
+              <p className="font-mono text-[0.6875rem] uppercase tracking-[0.05em] text-white/80">
+                <span className="text-white">{study.stats.views}</span> views
+                <span className="mx-1">&middot;</span>
+                <span className="text-white">{study.stats.likes}</span> likes
+              </p>
+            </div>
+          )}
+          {!isHovered && <div />}
+
           <motion.p
             style={{ opacity: labelOpacity }}
             className="font-mono text-[0.75rem] uppercase tracking-[0.15em] text-white/90 sm:text-[0.875rem]"
