@@ -30,7 +30,7 @@ export function FooterContent() {
           hello@akal.space
         </a>
         <a
-          href="https://instagram.com/akal.eats"
+          href="https://instagram.com/akal.space"
           target="_blank"
           rel="noopener noreferrer"
           className="font-sans text-[0.75rem] font-medium uppercase text-text-secondary transition-colors duration-150 ease-in-out hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
@@ -38,7 +38,7 @@ export function FooterContent() {
           Instagram
         </a>
         <a
-          href="https://tiktok.com/@akal.eats"
+          href="https://tiktok.com/@akal.space"
           target="_blank"
           rel="noopener noreferrer"
           className="font-sans text-[0.75rem] font-medium uppercase text-text-secondary transition-colors duration-150 ease-in-out hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
