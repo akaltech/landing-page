@@ -30,9 +30,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "AKal — London's Cultural Content Collective",
+  title: "Akal Space — London's Cultural Content Collective",
   description:
-    "A London collective creating content that moves young British Muslims — one brand, one story, one moment at a time.",
+    "A London collective creating content that moves young British Muslims — one brand, one story, one moment at a time. Our community moves with intention: they care about what they eat, they care about quality, and they put their money behind the businesses that get them.",
 };
 
 export default function RootLayout({
