@@ -14,10 +14,10 @@ export function FooterContent() {
       {/* Tagline */}
       <div className="col-span-2 flex flex-col justify-center sm:col-span-3 lg:col-span-5">
         <p className="font-sans text-[0.6875rem] font-medium uppercase text-text-tertiary sm:text-[0.75rem]">
-          a halal food content collective in London
+          a cultural content collective in London
         </p>
         <p className="font-sans text-[0.6875rem] font-medium uppercase text-text-tertiary sm:text-[0.75rem]">
-          creating content with brands who get it.
+          creating with brands who move our community.
         </p>
       </div>
 

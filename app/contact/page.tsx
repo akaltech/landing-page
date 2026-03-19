@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { FooterContent } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Contact — AKal Eats",
-  description: "Get in touch with AKal Eats — let's create something together.",
+  title: "Contact — AKal",
+  description: "Get in touch with AKal — let's create something together.",
 };
 
 const services = [
@@ -21,7 +21,7 @@ const services = [
   ],
   [
     "Audience Research",
-    "Brand Positioning for Gen-Z Muslims",
+    "Brand Positioning for Muslim Audiences",
     "Campaign Ideation",
     "Ongoing Retainers",
   ],

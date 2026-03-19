@@ -90,9 +90,9 @@ const caseStudies: CaseStudy[] = [
   {
     id: "thai-cup",
     brand: "THAI CUP",
-    description: "Halal Thai street food that doesn't compromise",
+    description: "Thai street food that doesn't compromise",
     brief:
-      "Built hype around their signature Thai milk teas and street food classics — positioning them as the go-to halal Thai in central London.",
+      "Built hype around their signature Thai milk teas and street food classics — positioning them as the go-to Thai street food spot in central London.",
     stats: { views: "14.9K", likes: "1K" },
     color: "#4A2D2D",
     video: "/videos/v24044gl0000cv2tuenog65i3plcus3g.MP4",
@@ -120,9 +120,9 @@ const caseStudies: CaseStudy[] = [
   {
     id: "hei-hei",
     brand: "HEI HEI",
-    description: "Halal Cantonese in the heart of Whitechapel",
+    description: "Cantonese cooking in the heart of Whitechapel",
     brief:
-      "Put the spotlight on proper Cantonese cooking done halal — a Whitechapel gem our community needed on their radar.",
+      "Put the spotlight on proper Cantonese cooking for our community — a Whitechapel gem they needed on their radar.",
     stats: { views: "17.2K", likes: "1.4K" },
     color: "#3D3D1F",
     video: "/videos/v24044gl0000d3b8817og65iavtpo4e0.MP4",
@@ -132,7 +132,7 @@ const caseStudies: CaseStudy[] = [
     brand: "TOP FIVE INDONESIAN",
     description: "The nasi goreng worth knowing about",
     brief:
-      "Put a spotlight on a cuisine that's massively underrepresented in London's halal scene — bold spices, generous plates, no shortcuts.",
+      "Put a spotlight on a cuisine that's massively underrepresented in London's food scene — bold spices, generous plates, no shortcuts.",
     stats: { views: "21K", likes: "1.6K" },
     color: "#1F3D2D",
     video: "/videos/v24044gl0000d5dt9jfog65m5m90vqeg.MP4",

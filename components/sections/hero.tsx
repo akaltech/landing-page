@@ -267,10 +267,10 @@ function HeroStatic() {
 
         <div className="col-span-4 self-end pt-8 sm:col-span-5 sm:pt-12 lg:col-span-5 lg:row-start-3 lg:pt-16">
           <p className="max-w-[65ch] text-[1.125rem] leading-[1.7] text-text-secondary">
-            a London collective uncovering the hidden gems of Muslim culture,
-            one restaurant, one brand, one story at a time. Our community of
-            young British Muslims move with intention: they care about
-            what&apos;s halal, they care about quality, and they support the
+            a London collective creating content that moves young British
+            Muslims — one brand, one story, one moment at a time. our
+            community moves with intention: they care about what they eat,
+            they care about quality, and they put their money behind the
             businesses that get them.
           </p>
         </div>

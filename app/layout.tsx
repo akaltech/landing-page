@@ -29,9 +29,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Akal London's Halal Culture Collective",
+  title: "AKal — London's Cultural Content Collective",
   description:
-    "A London collective uncovering the hidden gems of Muslim culture, one restaurant, one brand, one story at a time.",
+    "A London collective creating content that moves young British Muslims — one brand, one story, one moment at a time.",
 };
 
 export default function RootLayout({
