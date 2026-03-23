@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Plus_Jakarta_Sans, Inter_Tight } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/layout/header";
 import { AudioProvider } from "@/components/providers/audio-provider";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
           {children}
         </AudioProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
