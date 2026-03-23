@@ -397,8 +397,11 @@ function RolodexCard({
     }
   }, [isHovered, globalMuted]);
 
-  /* Desktop click handler — opens TikTok in new tab */
+  /* Desktop click handler — opens TikTok in new tab (lg+ only) */
   const handleCardClick = useCallback(() => {
+    // Only handle click on desktop (lg breakpoint = 1024px)
+    if (window.innerWidth < 1024) return;
+
     if (study.tiktokUrl) {
       track("case_study_click", { brand: study.brand, id: study.id });
       window.open(study.tiktokUrl, "_blank", "noopener,noreferrer");
