@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Plus_Jakarta_Sans, Inter_Tight } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/header";
+import { AudioProvider } from "@/components/providers/audio-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,8 +46,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${plusJakarta.variable} ${interTight.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <AudioProvider>
+          <Header />
+          {children}
+        </AudioProvider>
         <Analytics />
       </body>
     </html>

@@ -11,6 +11,9 @@ import {
   type MotionValue,
 } from "framer-motion";
 import { useRef, useState, useCallback, useEffect } from "react";
+import { Volume2, VolumeX } from "lucide-react";
+import { track } from "@vercel/analytics";
+import { useAudio } from "@/components/providers/audio-provider";
 
 /* ─── Easing ─── */
 const easeOut = [0.25, 0.1, 0.25, 1] as const;
@@ -24,6 +27,7 @@ interface CaseStudy {
   stats: { views: string; likes: string };
   color: string;
   video?: string;
+  tiktokUrl?: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -36,6 +40,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "251K", likes: "12.3K" },
     color: "#2D1F2D",
     video: "/videos/v24044gl0000d4ct26nog65sqi3br5fg.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7573314351893908758",
   },
   {
     id: "mr-whites-chophouse",
@@ -46,6 +51,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "87.8K", likes: "4.6K" },
     color: "#3D2B1F",
     video: "/videos/v24044gl0000cv8r4bnog65kc6l90q10.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7480957310173547798",
   },
   {
     id: "lorenzo-kusina",
@@ -56,6 +62,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "100.5K", likes: "9.6K" },
     color: "#3D1F1F",
     video: "/videos/v24044gl0000d1vpobfog65iv3canr10.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7529909473364725014",
   },
   {
     id: "meaa",
@@ -66,6 +73,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "60.2K", likes: "1.8K" },
     color: "#1F2D3D",
     video: "/videos/v24044gl0000d346bn7og65msp5ha51g.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7550397923125792022",
   },
   {
     id: "urumchi",
@@ -76,6 +84,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "46K", likes: "4.7K" },
     color: "#8B4513",
     video: "/videos/v0f044gc0000cu58cu7og65qqb7dn8ng.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7460923681783549217",
   },
   {
     id: "cafe-east-pho",
@@ -86,6 +95,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "41.6K", likes: "1.8K" },
     color: "#2D4A3E",
     video: "/videos/v0f044gc0000culp5inog65tro2v6l00.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7470227610128157985",
   },
   {
     id: "thai-cup",
@@ -96,6 +106,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "14.9K", likes: "1K" },
     color: "#4A2D2D",
     video: "/videos/v24044gl0000cv2tuenog65i3plcus3g.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7477629917501443350",
   },
   {
     id: "smoke-and-pepper",
@@ -106,6 +117,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "10.6K", likes: "500" },
     color: "#1A3A2A",
     video: "/videos/v24044gl0000d02iqbvog65oahpp4ttg.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7495450061720128790",
   },
   {
     id: "huong-viet",
@@ -116,6 +128,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "21.5K", likes: "1.4K" },
     color: "#2A1F3D",
     video: "/videos/v24044gl0000d0d2kevog65qsing9lo0.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7501356854686092567",
   },
   {
     id: "hei-hei",
@@ -126,6 +139,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "17.2K", likes: "1.4K" },
     color: "#3D3D1F",
     video: "/videos/v24044gl0000d3b8817og65iavtpo4e0.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7554373176730422550",
   },
   {
     id: "top-five-indonesian",
@@ -136,6 +150,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "21K", likes: "1.6K" },
     color: "#1F3D2D",
     video: "/videos/v24044gl0000d5dt9jfog65m5m90vqeg.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7591895694731005206",
   },
   {
     id: "bali-bali",
@@ -146,6 +161,7 @@ const caseStudies: CaseStudy[] = [
     stats: { views: "17.4K", likes: "1.2K" },
     color: "#3D2D1F",
     video: "/videos/v24044gl0000d65j447og65ld8vreht0.MP4",
+    tiktokUrl: "https://www.tiktok.com/@akal.space/video/7605227521856146690",
   },
 ];
 
@@ -164,6 +180,7 @@ export function CaseStudies() {
 
 function CaseStudiesAnimated() {
   const outerRef = useRef<HTMLDivElement>(null);
+  const { isMuted, toggleMute } = useAudio();
 
   /* Hover state: motion value for animation, React state for info panel */
   const hoveredMV = useMotionValue(-1);
@@ -202,6 +219,18 @@ function CaseStudiesAnimated() {
         className="sticky top-0 flex h-svh flex-col overflow-hidden bg-bg-hero"
         style={{ paddingBlock: "clamp(2rem, 1.5rem + 2.11vw, 3rem)" }}
       >
+        {/* Mute/unmute toggle — top of section */}
+        <div className="flex justify-center pb-4">
+          <button
+            onClick={toggleMute}
+            className="flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 font-sans text-[0.875rem] font-medium text-text-secondary backdrop-blur-sm transition-all duration-100 ease-linear hover:bg-white/20 hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+            aria-label={isMuted ? "Unmute videos" : "Mute videos"}
+          >
+            {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+            <span>{isMuted ? "unmute" : "mute"}</span>
+          </button>
+        </div>
+
         {/* Content area — centered rolodex, info panel absolute */}
         <div
           className="relative flex min-h-0 flex-1 items-center justify-center"
@@ -337,16 +366,44 @@ function RolodexCard({
   /* Label fades out when card is very compressed */
   const labelOpacity = useTransform(flex, [0, 0.8, 1.5], [0, 0, 1]);
 
-  /* Unmute on hover and ensure playback continues */
+  /* Video ref for playback control */
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { isMuted: globalMuted } = useAudio();
+
+  /* Start playing muted on mount - works without user interaction */
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    video.muted = !isHovered;
-    if (isHovered) {
-      video.play().catch(() => {});
+    video.play().catch(() => {});
+  }, []);
+
+  /* Control video mute based on global mute state and hover */
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Only unmute if: globally unmuted AND card is hovered
+    const shouldUnmute = !globalMuted && isHovered;
+
+    if (shouldUnmute) {
+      video.muted = false;
+      video.play().catch(() => {
+        // If play fails (autoplay policy), keep it muted but playing
+        video.muted = true;
+        video.play().catch(() => {});
+      });
+    } else {
+      video.muted = true;
     }
-  }, [isHovered]);
+  }, [isHovered, globalMuted]);
+
+  /* Desktop click handler — opens TikTok in new tab */
+  const handleCardClick = useCallback(() => {
+    if (study.tiktokUrl) {
+      track("case_study_click", { brand: study.brand, id: study.id });
+      window.open(study.tiktokUrl, "_blank", "noopener,noreferrer");
+    }
+  }, [study.tiktokUrl, study.brand, study.id]);
 
   return (
     <motion.div
@@ -356,6 +413,7 @@ function RolodexCard({
       onTouchStart={onHover}
       onTouchEnd={onHoverEnd}
       onFocus={onHover}
+      onClick={handleCardClick}
       tabIndex={0}
       role="article"
       aria-label={`${study.brand} case study`}
@@ -388,12 +446,34 @@ function RolodexCard({
           )}
           {!isHovered && <div />}
 
-          <motion.p
-            style={{ opacity: labelOpacity }}
-            className="font-mono text-[0.75rem] uppercase tracking-[0.15em] text-white/90 sm:text-[0.875rem]"
-          >
-            {study.brand}
-          </motion.p>
+          <div className="flex items-end justify-between">
+            <motion.p
+              style={{ opacity: labelOpacity }}
+              className="font-mono text-[0.75rem] uppercase tracking-[0.15em] text-white/90 sm:text-[0.875rem]"
+            >
+              {study.brand}
+            </motion.p>
+
+            {/* Mobile "View Video" button — appears on hover/touch */}
+            {isHovered && study.tiktokUrl && (
+              <a
+                href={study.tiktokUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  track("case_study_click", {
+                    brand: study.brand,
+                    id: study.id,
+                    source: "button",
+                  });
+                }}
+                className="rounded-full bg-white/20 px-3 py-1.5 font-mono text-[0.6875rem] uppercase tracking-[0.05em] text-white backdrop-blur-sm transition-colors hover:bg-white/30 lg:hidden"
+              >
+                View Video
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
