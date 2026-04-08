@@ -6,7 +6,7 @@ import {
   useInView,
   type Variants,
 } from "framer-motion";
-import { Eye, Utensils, Users } from "lucide-react";
+import { Eye, Handshake, Users } from "lucide-react";
 import { useRef, useEffect, useState, useCallback } from "react";
 
 /* ─── Easing ─── */
@@ -150,14 +150,14 @@ export function Numbers() {
           variants={cardSlideVariants}
           className="col-span-4 flex min-h-[28rem] flex-col justify-between rounded-[2rem] bg-bg-inverse p-5 transition-transform duration-150 ease-out hover:-translate-y-1 sm:col-span-4 sm:p-6 lg:col-span-3"
         >
-          <Utensils size={24} className="text-text-inverse" />
+          <Handshake size={24} className="text-text-inverse" />
 
           <div className="mt-auto">
             <p className="font-display text-[clamp(3rem,2.5rem+3.17vw,5.5rem)] font-[800] leading-[1.0] tracking-[-0.02em] text-text-inverse">
               <AnimatedCounter target={50} suffix="+" duration={700} inView={isInView} />
             </p>
             <p className="mt-3 text-[1rem] leading-[1.6] text-text-inverse/70">
-              Restaurant partners featured
+              Brand partners featured
             </p>
           </div>
         </motion.div>
@@ -217,13 +217,13 @@ function NumbersStatic() {
 
         {/* Card 2 — Restaurants */}
         <div className="col-span-4 flex min-h-[28rem] flex-col justify-between rounded-[2rem] bg-bg-inverse p-5 sm:col-span-4 sm:p-6 lg:col-span-3">
-          <Utensils size={24} className="text-text-inverse" />
+          <Handshake size={24} className="text-text-inverse" />
           <div className="mt-auto">
             <p className="font-display text-[clamp(3rem,2.5rem+3.17vw,5.5rem)] font-[800] leading-[1.0] tracking-[-0.02em] text-text-inverse">
               50+
             </p>
             <p className="mt-3 text-[1rem] leading-[1.6] text-text-inverse/70">
-              Restaurant partners featured
+              Brand partners featured
             </p>
           </div>
         </div>

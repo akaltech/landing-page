@@ -180,10 +180,10 @@ export function Hero() {
           style={{ opacity: contentOpacity }}
         >
           <p className="max-w-[65ch] text-[1.125rem] leading-[1.7] text-text-secondary">
-            We create content that moves young British Muslims — an audience
-            that doesn&apos;t just scroll, they share, show up, and spend. If
-            your brand wants to reach them authentically, we&apos;re how you
-            get in the room.
+            We create content that moves young British Muslims — 3.9 million
+            people who don&apos;t just scroll, they share, show up, and spend.
+            If your brand wants to reach them authentically, we&apos;re how
+            you get in the room.
           </p>
         </motion.div>
 
@@ -236,7 +236,7 @@ export function Hero() {
               ease: [0.25, 0.1, 0.25, 1],
             }}
           >
-            🍔
+            ↓
           </motion.span>
           <span className="font-sans text-[0.875rem] font-medium text-text-secondary">
             our work
@@ -268,10 +268,9 @@ function HeroStatic() {
         <div className="col-span-4 self-end pt-8 sm:col-span-5 sm:pt-12 lg:col-span-5 lg:row-start-3 lg:pt-16">
           <p className="max-w-[65ch] text-[1.125rem] leading-[1.7] text-text-secondary">
             a London collective creating content that moves young British
-            Muslims — one brand, one story, one moment at a time. our
-            community moves with intention: they care about what they eat,
-            they care about quality, and they put their money behind the
-            businesses that get them.
+            Muslims — 3.9 million people who share what they believe in,
+            show up for brands they trust, and spend with intention. if your
+            brand wants in, we&apos;re how you get there.
           </p>
         </div>
 
@@ -297,7 +296,7 @@ function HeroStatic() {
           className="col-span-4 flex items-center justify-center gap-2 pb-6 pt-6 sm:col-span-8 sm:pb-8 lg:col-span-12 lg:row-start-4 lg:pb-10"
         >
           <span aria-hidden="true" className="inline-block -rotate-45">
-            🍔
+            ↓
           </span>
           <span className="font-sans text-[0.875rem] font-medium text-text-secondary">
             our work
