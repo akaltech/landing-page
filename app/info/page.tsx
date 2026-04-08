@@ -5,7 +5,7 @@ import { FooterContent } from "@/components/layout/footer";
 export const metadata: Metadata = {
   title: "Info — Akal",
   description:
-    "We create content that moves young British Muslims — because we are that audience. Meet the team behind AKal.",
+    "We create content that reaches young British Muslims — because we are that audience. Meet the team behind Akal.",
 };
 
 const teamMembers = [
@@ -55,7 +55,7 @@ export default function InfoPage() {
         <div className="relative col-span-4 row-start-1 self-end overflow-hidden aspect-[3/4] max-h-[60vh] sm:col-span-3 sm:col-start-6 sm:row-start-2 lg:col-span-4 lg:col-start-9">
           <Image
             src="/team/team.jpeg"
-            alt="AKal Eats team photo — abdullah, alfie, and sav with a spread of burgers and loaded fries"
+            alt="Akal team photo — abdullah, alfie, and sav"
             fill
             sizes="(max-width: 640px) 75vw, (max-width: 1024px) 37.5vw, 33vw"
             className="object-cover"
@@ -81,10 +81,10 @@ export default function InfoPage() {
         {/* Body copy */}
         <div className="col-span-4 mt-6 sm:col-span-5 sm:col-start-4 sm:mt-0 lg:col-span-6 lg:col-start-5">
           <p className="max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
-            young british muslims are one of the most engaged audiences on
-            social — but most brands have no idea how to reach them. the content
-            feels forced, the cultural references are off, and the audience can
-            tell in half a second.
+            3.9 million british muslims. £20 billion in spending power. one of
+            the most engaged audiences on social — and most brands have no idea
+            how to reach them. the content feels forced, the cultural references
+            are off, and the audience can tell in half a second.
           </p>
           <p className="mt-6 max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
             we started akal because we saw the gap. three friends from the
@@ -93,9 +93,11 @@ export default function InfoPage() {
             know what gets shared, what gets saved, and what gets ignored.
           </p>
           <p className="mt-6 max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
-            brands work with us because our content performs. 9.3% engagement,
-            35K shares, 1.3M views this year — numbers built on trust, not
-            tricks. if your brand wants in, we&apos;re how you get there.
+            we started in food because that&apos;s where culture lives loudest.
+            but our audience doesn&apos;t stop at restaurants — they buy, travel,
+            invest, dress, and choose brands the same way they choose where to
+            eat. with intention. 9.3% engagement, 35K shares, 1.3M views this
+            year — numbers built on trust, not tricks.
           </p>
         </div>
       </section>

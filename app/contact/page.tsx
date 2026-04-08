@@ -20,8 +20,8 @@ const services = [
     "A/B Creative Testing",
   ],
   [
-    "Audience Research",
-    "Brand Positioning for Muslim Audiences",
+    "Muslim Audience Strategy",
+    "Cultural Consulting",
     "Campaign Ideation",
     "Ongoing Retainers",
   ],
