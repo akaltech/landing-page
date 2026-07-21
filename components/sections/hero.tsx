@@ -8,6 +8,7 @@ import {
   useInView,
 } from "framer-motion";
 import { useRef, useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 
 /* ─── Easing ─── */
 const easeOut = [0.25, 0.1, 0.25, 1] as const;
@@ -28,7 +29,7 @@ const stats = [
   },
   {
     label: "total views across our content this year.",
-    target: 1.3,
+    target: 1.4,
     suffix: "M+",
     decimals: 1,
   },
@@ -179,11 +180,22 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.65, ease: easeOut }}
           style={{ opacity: contentOpacity }}
         >
+          <Link
+            href="/contact"
+            className="group/offer mb-3 inline-flex items-center gap-1.5 font-mono text-[0.75rem] uppercase leading-[1.4] tracking-[0.1em] text-accent-text transition-colors duration-150 ease-in-out hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+          >
+            ALWAYS ON — FOR CONSUMER APPS
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-150 ease-in-out group-hover/offer:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
           <p className="max-w-[65ch] text-[1.125rem] leading-[1.7] text-text-secondary">
-            We create content that moves young British Muslims — 3.9 million
-            people who don&apos;t just scroll, they share, show up, and spend.
-            If your brand wants to reach them authentically, we&apos;re how
-            you get in the room.
+            A content studio and creator community. We build audiences on the
+            algorithm, not on ad spend. 1.4M+ organic views, none of it paid
+            for — now we do it for other people&apos;s products.
           </p>
         </motion.div>
 
@@ -266,11 +278,22 @@ function HeroStatic() {
         </div>
 
         <div className="col-span-4 self-end pt-8 sm:col-span-5 sm:pt-12 lg:col-span-5 lg:row-start-3 lg:pt-16">
+          <Link
+            href="/contact"
+            className="group/offer mb-3 inline-flex items-center gap-1.5 font-mono text-[0.75rem] uppercase leading-[1.4] tracking-[0.1em] text-accent-text transition-colors duration-150 ease-in-out hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+          >
+            always on — for consumer apps
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-150 ease-in-out group-hover/offer:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
           <p className="max-w-[65ch] text-[1.125rem] leading-[1.7] text-text-secondary">
-            a London collective creating content that moves young British
-            Muslims — 3.9 million people who share what they believe in,
-            show up for brands they trust, and spend with intention. if your
-            brand wants in, we&apos;re how you get there.
+            a content studio and creator community. we build audiences on the
+            algorithm, not on ad spend. 1.4m+ organic views, none of it paid
+            for — now we do it for other people&apos;s products.
           </p>
         </div>
 

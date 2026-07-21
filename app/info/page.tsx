@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { FooterContent } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Info — Akal",
+  title: "Info — akal",
   description:
-    "We create content that reaches young British Muslims — because we are that audience. Meet the team behind Akal.",
+    "akal is a content studio and creator community. food was the proving ground — 1.4m+ organic views is the receipt. meet the team.",
 };
 
 const teamMembers = [
@@ -49,7 +50,7 @@ export default function InfoPage() {
           className="col-span-4 row-start-2 self-end font-display text-[clamp(1.5rem,3vw,2.75rem)] font-black leading-[1.1] tracking-[-0.06em] text-[#141211] sm:col-span-5 lg:col-span-7"
           style={{ textWrap: "balance", wordSpacing: "0.15em" }}
         >
-          WE CREATE FOR AN AUDIENCE WE KNOW — BECAUSE WE ARE THAT AUDIENCE.
+          WE MADE THE CONTENT BEFORE WE MANAGED IT.
         </h1>
 
         <div className="relative col-span-4 row-start-1 self-end overflow-hidden aspect-[3/4] max-h-[60vh] sm:col-span-3 sm:col-start-6 sm:row-start-2 lg:col-span-4 lg:col-start-9">
@@ -81,24 +82,35 @@ export default function InfoPage() {
         {/* Body copy */}
         <div className="col-span-4 mt-6 sm:col-span-5 sm:col-start-4 sm:mt-0 lg:col-span-6 lg:col-start-5">
           <p className="max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
-            3.9 million british muslims. £20 billion in spending power. one of
-            the most engaged audiences on social — and most brands have no idea
-            how to reach them. the content feels forced, the cultural references
-            are off, and the audience can tell in half a second.
+            akal started as a food and culture channel. we took it from nothing
+            to over 1.4 million organic views without spending a penny on
+            distribution — just short-form the algorithm actually carried.
           </p>
           <p className="mt-6 max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
-            we started akal because we saw the gap. three friends from the
-            community, building a content engine that actually resonates — not
-            because we studied the audience, but because we are the audience. we
-            know what gets shared, what gets saved, and what gets ignored.
+            what we learned doing that is the business now: how to make content
+            that travels, and how to make a lot of it without the quality
+            falling over. we run it as two halves — a community of 30+ trained
+            creators we direct, and a studio that decides what good looks like.
           </p>
           <p className="mt-6 max-w-[65ch] font-sans text-[1.125rem] leading-[1.6] text-[#141211]/70">
-            we started in food because that&apos;s where culture lives loudest.
-            but our audience doesn&apos;t stop at restaurants — they buy, travel,
-            invest, dress, and choose brands the same way they choose where to
-            eat. with intention. 9.3% engagement, 35K shares, 1.3M views this
-            year — numbers built on trust, not tricks.
+            now we do it for other people&apos;s products. a cast of creators run
+            dedicated accounts for consumer apps and post every day, organic,
+            every video reviewed before it goes live. the vertical was always
+            incidental. the skill is what travels.
           </p>
+
+          <Link
+            href="/contact"
+            className="group/offer mt-6 inline-flex items-center gap-1.5 font-mono text-[0.75rem] uppercase tracking-[0.1em] text-[#141211]/70 transition-colors duration-150 ease-in-out hover:text-[#141211] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-primary"
+          >
+            ALWAYS ON — FOR CONSUMER APPS
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-150 ease-in-out group-hover/offer:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
         </div>
       </section>
 
