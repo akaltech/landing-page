@@ -34,9 +34,9 @@ const caseStudies: CaseStudy[] = [
   {
     id: "shake-shack",
     brand: "SHAKE SHACK",
-    description: "When a New York icon goes fully halal",
+    description: "When a New York icon changes its whole menu",
     brief:
-      "Broke the news that all UK beef and chicken is now halal-certified. The community had been waiting — we made sure they heard it first.",
+      "Broke the news that Shake Shack's UK beef and chicken had gone fully halal-certified — and built the video to travel first. 251K views on a single announcement.",
     stats: { views: "251K", likes: "12.3K" },
     color: "#2D1F2D",
     video: "/videos/v24044gl0000d4ct26nog65sqi3br5fg.MP4",
@@ -45,9 +45,9 @@ const caseStudies: CaseStudy[] = [
   {
     id: "mr-whites-chophouse",
     brand: "MR WHITES CHOPHOUSE",
-    description: "Marco Pierre White does iftar. Seriously.",
+    description: "Marco Pierre White, made unmissable.",
     brief:
-      "Captured the full iftar sharing platter experience — sirloin, rack of lamb, sticky toffee — to drive Ramadan bookings from our community.",
+      "Captured the full sharing-platter experience — sirloin, rack of lamb, sticky toffee — and turned a fine-dining name into bookings.",
     stats: { views: "87.8K", likes: "4.6K" },
     color: "#3D2B1F",
     video: "/videos/v24044gl0000cv8r4bnog65kc6l90q10.MP4",
@@ -58,7 +58,7 @@ const caseStudies: CaseStudy[] = [
     brand: "LORENZO KUSINI",
     description: "Filipino soul food, born in lockdown",
     brief:
-      "Told the origin story of three brothers who turned a pandemic kitchen into London's halal Filipino movement. Adobo beef, jerk-glazed inasal, no pork ever.",
+      "Told the origin story of three brothers who turned a pandemic kitchen into a London Filipino movement — adobo beef, jerk-glazed inasal. A founder story that travelled.",
     stats: { views: "100.5K", likes: "9.6K" },
     color: "#3D1F1F",
     video: "/videos/v24044gl0000d1vpobfog65iv3canr10.MP4",
@@ -69,7 +69,7 @@ const caseStudies: CaseStudy[] = [
     brand: "MEAA",
     description: "Where brunch meets the Mediterranean",
     brief:
-      "Highlighted the interiors and the menu — Southern European and North African flavours colliding in a space our audience needed to see.",
+      "Highlighted the interiors and the menu — Southern European and North African flavours colliding in a space people needed to see.",
     stats: { views: "60.2K", likes: "1.8K" },
     color: "#1F2D3D",
     video: "/videos/v24044gl0000d346bn7og65msp5ha51g.MP4",
@@ -91,7 +91,7 @@ const caseStudies: CaseStudy[] = [
     brand: "CAFE EAST PHO",
     description: "A 27-year pho legacy, still simmering",
     brief:
-      "Told the story of a family recipe and a 10-hour broth — showing our audience that halal Vietnamese goes far beyond the usual spots.",
+      "Told the story of a family recipe and a 10-hour broth — proof a local institution can travel far beyond its postcode.",
     stats: { views: "41.6K", likes: "1.8K" },
     color: "#2D4A3E",
     video: "/videos/v0f044gc0000culp5inog65tro2v6l00.MP4",
@@ -135,7 +135,7 @@ const caseStudies: CaseStudy[] = [
     brand: "HEI HEI",
     description: "Cantonese cooking in the heart of Whitechapel",
     brief:
-      "Put the spotlight on proper Cantonese cooking for our community — a Whitechapel gem they needed on their radar.",
+      "Put the spotlight on proper Cantonese cooking — a Whitechapel gem worth the detour.",
     stats: { views: "17.2K", likes: "1.4K" },
     color: "#3D3D1F",
     video: "/videos/v24044gl0000d3b8817og65iavtpo4e0.MP4",

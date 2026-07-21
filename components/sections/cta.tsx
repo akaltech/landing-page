@@ -72,13 +72,24 @@ export function CTA() {
           reaches them.
         </motion.h2>
 
-        {/* Email */}
+        {/* Book a call */}
         <motion.a
-          href="mailto:hello@akal.space"
+          href="https://cal.com/hello-akal/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="col-span-4 mt-6 font-display text-[clamp(1.25rem,1rem+1.06vw,2.25rem)] font-[800] leading-[1.2] tracking-[-0.05em] text-text-secondary transition-colors duration-150 ease-in-out hover:text-text-primary sm:col-span-7 lg:col-span-9"
           variants={itemVariants}
         >
-          hello@akal.space
+          book a call →
+        </motion.a>
+
+        {/* Email */}
+        <motion.a
+          href="mailto:hello@akal.space"
+          className="col-span-4 mt-3 font-sans text-[1rem] font-medium text-text-tertiary transition-colors duration-150 ease-in-out hover:text-text-secondary sm:col-span-7 lg:col-span-9"
+          variants={itemVariants}
+        >
+          or email hello@akal.space
         </motion.a>
       </motion.div>
     </section>
@@ -110,12 +121,22 @@ function CTAStatic() {
           reaches them.
         </h2>
 
+        {/* Book a call */}
+        <a
+          href="https://cal.com/hello-akal/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="col-span-4 mt-6 font-display text-[clamp(1.25rem,1rem+1.06vw,2.25rem)] font-[800] leading-[1.2] tracking-[-0.05em] text-text-secondary transition-colors duration-150 ease-in-out hover:text-text-primary sm:col-span-7 lg:col-span-9"
+        >
+          book a call →
+        </a>
+
         {/* Email */}
         <a
           href="mailto:hello@akal.space"
-          className="col-span-4 mt-6 font-display text-[clamp(1.25rem,1rem+1.06vw,2.25rem)] font-[800] leading-[1.2] tracking-[-0.05em] text-text-secondary transition-colors duration-150 ease-in-out hover:text-text-primary sm:col-span-7 lg:col-span-9"
+          className="col-span-4 mt-3 font-sans text-[1rem] font-medium text-text-tertiary transition-colors duration-150 ease-in-out hover:text-text-secondary sm:col-span-7 lg:col-span-9"
         >
-          hello@akal.space
+          or email hello@akal.space
         </a>
       </div>
     </section>

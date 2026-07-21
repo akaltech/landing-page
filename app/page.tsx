@@ -2,7 +2,7 @@ import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { BrandTicker } from "@/components/sections/brand-ticker";
 import { CaseStudies } from "@/components/sections/case-studies";
-import { CTA } from "@/components/sections/cta";
+import { WhatYouGet } from "@/components/sections/what-you-get";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <BrandTicker />
       <CaseStudies />
-      {/* <CTA /> */}
+      <WhatYouGet />
       <Footer />
     </>
   );
