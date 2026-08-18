@@ -112,16 +112,66 @@ a, button, [role="button"], [type="button"], [type="submit"], [tabindex="0"] {
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
 }
 
-.animate-marquee:hover,
-.group:hover .animate-marquee {
+/* Cards are far larger on phones, so the same speed reads as frantic. */
+@media (max-width: 639px) {
+  .animate-marquee {
+    --marquee-duration: 105s;
+  }
+}
+
+/* Pause on hover and on keyboard focus.
+   :focus-within matters — without it a focused card scrolls out from under
+   the user. Both tracks share the rule so they never desync. */
+.marquee-viewport:hover .animate-marquee,
+.marquee-viewport:focus-within .animate-marquee {
   animation-play-state: paused;
 }
 
+/* ─── Entrance ─── */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+/* Entrance cascade — total stagger stays under 600ms. */
+.rise-0 { --rise-delay: 0ms; }
+.rise-1 { --rise-delay: 100ms; }
+.rise-2 { --rise-delay: 200ms; }
+.rise-3 { --rise-delay: 300ms; }
+
+/* ─── Reduced motion ───
+   The marquee stops, so the track becomes manually scrollable to keep all 12
+   projects reachable. Flips cross-fade instead of rotating in 3D. */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;
   }
+
+  .marquee-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .marquee-viewport a {
+    scroll-snap-align: center;
+  }
+
+  .animate-rise {
+    animation: none;
+  }
+
 }
