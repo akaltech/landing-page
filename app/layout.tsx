@@ -3,8 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Plus_Jakarta_Sans, Inter_Tight } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Header } from "@/components/layout/header";
-import { AudioProvider } from "@/components/providers/audio-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,9 +30,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Akal Space — London's Cultural Content Collective",
+  title: "Akal Space — A Content Studio for Gen-Z",
   description:
-    "A London collective creating content that moves young British Muslims — one brand, one story, one moment at a time. Our community moves with intention: they care about what they eat, they care about quality, and they put their money behind the businesses that get them.",
+    "A London content studio creating short-form video for gen-z audiences. 1.3M+ views this year across 12 brands — content they stop for, share, and show up for.",
 };
 
 export default function RootLayout({
@@ -47,10 +45,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${plusJakarta.variable} ${interTight.variable} antialiased`}
       >
-        <AudioProvider>
-          <Header />
-          {children}
-        </AudioProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
