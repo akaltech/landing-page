@@ -30,9 +30,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Akal Space — A Content Studio for Gen-Z",
+  title: "akal — a content studio & creator community",
   description:
-    "A London content studio creating short-form video for gen-z audiences. 1.3M+ views this year across 12 brands — content they stop for, share, and show up for.",
+    "we build audiences on the algorithm, not on ad spend. a cast of trained creators run dedicated accounts for consumer apps and post every day — organic growth, not ad-buying. 1.4m+ organic views, none of it paid for.",
 };
 
 export default function RootLayout({
